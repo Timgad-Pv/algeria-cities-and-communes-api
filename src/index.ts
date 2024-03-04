@@ -14,7 +14,7 @@ app.get("/", async (c) => {
   }
 });
 
-app.get("/cities", async (c) => {
+app.get("/wilayas", async (c) => {
   try {
     const cities = data.map((city) => {
       return {
@@ -30,12 +30,12 @@ app.get("/cities", async (c) => {
   }
 });
 
-app.get("/cities/:id", async (c) => {
+app.get("/wilayas/:id", async (c) => {
   const id = c.req.param("id");
 
   try {
     const city = data.filter((city) => city.id === Number(id));
-    const response = city.length ? c.json(city[0]) : c.text("No City Found");
+    const response = city.length ? c.json(city[0]) : c.text("No wilaya Found");
 
     return response;
   } catch (error: any) {
