@@ -4,20 +4,20 @@ This API provides information about cities and communes in Algeria.
 
 **General Information:**
 
-All responses are in `JSON` format.
-All endpoints support `GET` requests.
+All responses are in `JSON` format. \n
+All endpoints support `GET` requests. \n
 
 **Endpoints:**
 
-1. `/cities:`
+1. **`/cities:`**
 
-Description: Retrieves all cities in Algeria without their associated communes.
-**Request:** `GET /cities`
-**Response:**
-A JSON array containing objects representing cities, with the following properties:
-`id: (integer)` Unique identifier of the city.
-`name_latin: (string)` Name of the city in Latin script.
-`name_arabic: (string)` Name of the city in Arabic script. 
+Description: Retrieves all cities in Algeria without their associated communes. \n
+* **Request:** `GET /cities`
+* **Response:**
+A JSON array containing objects representing cities, with the following properties: \n
+- **id:** `(integer)` Unique identifier of the city.
+- **name_latin:** `(string)` Name of the city in Latin script.
+- **name_arabic:** `(string)` Name of the city in Arabic script. 
 
 `2. /cities/:id:`
 
