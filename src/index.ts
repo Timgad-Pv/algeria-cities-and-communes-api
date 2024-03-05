@@ -35,7 +35,9 @@ app.get("/wilayas/:id", async (c) => {
 
   try {
     const city = data.filter((city) => city.id === Number(id));
-    const response = city.length ? c.json(city[0]) : c.text("No wilaya Found");
+    const response = city.length
+      ? c.json(city[0])
+      : c.json({ message: "No wilaya Found" });
 
     return response;
   } catch (error: any) {
